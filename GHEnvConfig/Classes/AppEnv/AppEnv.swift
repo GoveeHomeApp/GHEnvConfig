@@ -23,6 +23,8 @@ public enum AppEnv: Int {
         env = .pda
         #elseif PRE
         env = .pre
+        #elseif Adhoc
+        env = .dev
         #else
         env = .release
         #endif
@@ -145,6 +147,8 @@ public enum AppIoTEnv: Int {
         env = .dev
         #elseif PRE
         env = .pre
+        #elseif Adhoc
+        env = .dev
         #else
         env = .release
         #endif
