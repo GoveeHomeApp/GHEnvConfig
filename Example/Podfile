@@ -1,12 +1,17 @@
 platform :ios, '13.0'
-use_frameworks!
+use_frameworks! :linkage => :static
+use_modular_headers!
+install! 'cocoapods',
+  :warn_for_unused_master_specs_repo => false,
+  :preserve_pod_file_structure => true
 
 source 'git@github.com:GoveeHomeApp/GHSpecs.git'
 
 target 'GHEnvConfig_Example' do
 
   pod 'GHEnvConfig', :path => '../'
-
+  pod 'SAMKeychain', :git => 'git@github.com:GoveeHomeApp/SAMKeychain.git', :tag => '1.5.3'
+  pod 'HandyJSON', :git => 'git@github.com:GoveeHomeApp/HandyJSON.git', :tag => '5.0.4'
 end
 
 # post_install do |installer|
