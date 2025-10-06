@@ -11,7 +11,7 @@ target 'GHEnvConfig_Example' do
 
   pod 'GHEnvConfig', :path => '../'
   pod 'SAMKeychain', :git => 'git@github.com:GoveeHomeApp/SAMKeychain.git', :tag => '1.5.3'
-  pod 'HandyJSON', :git => 'git@github.com:GoveeHomeApp/HandyJSON.git', :tag => '5.0.4'
+  pod 'HandyJSON', :git => 'git@github.com:alibaba/HandyJSON.git', :tag => '5.0.2'
 end
 
 # post_install do |installer|
