@@ -60,6 +60,14 @@ struct H5V2URLDef: EnvValueDef {
     public static var RELEASE_Env = "https://webview.govee.com"
 }
 
+public class SpareServerURLDef: NSObject, EnvValueDef{
+    typealias ValueType = String
+    public static var DEV_Env = "https://dev-gapp.govee.com"    //dev开发环境
+    public static var PDA_Env = "https://dev-gapp.govee.com"    //pda测试环境
+    public static var PRE_Env = "https://gapp.govee.com"     //pre预发布环境
+    public static var RELEASE_Env = "https://gapp.govee.com"     //正式环境
+}
+
 protocol EnvDomainDef {
     static var serverID: String { get }
     static var serverURL: String { get }
@@ -85,6 +93,11 @@ public class AppEnvDomain: NSObject, EnvDomainDef {
     public static var h5V2: String {
         return H5V2URLDef.envValue(AppEnv.mainRun)
     }
+    
+    public static var spareServerURL: String {
+        return SpareServerURLDef.envValue(AppEnv.mainRun)
+    }
+    
     
     /// 分享
     public static var h5Share: String {
