@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'GHEnvConfig'
-  s.version      = '0.0.0'
+  s.version      = '0.0.1'
   s.summary      = 'GHEnvConfig.'
 
   s.homepage     = 'git@github.com:GoveeHomeApp/GHEnvConfig.git'
